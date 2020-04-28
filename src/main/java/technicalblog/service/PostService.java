@@ -47,4 +47,7 @@ public class PostService {
         return posts;
 
     }
+
+    public void createPost (Post newPost){
+    }
 }
