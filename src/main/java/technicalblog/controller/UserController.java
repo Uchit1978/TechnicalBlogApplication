@@ -12,6 +12,7 @@ import technicalblog.service.PostService;
 import technicalblog.service.UserService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
     public class UserController {
@@ -24,15 +25,19 @@ import java.util.ArrayList;
 
         @RequestMapping("users/login")
         public String login() {
+
             return "users/login";
         }
 
         @RequestMapping("users/registration")
         public String registration() {
+
             return "users/registration";
         }
+
         @RequestMapping(value = "users/registration", method=RequestMethod.POST)
         public String registerUser(User user) {
+
             return "users/login";
         }
 
@@ -48,7 +53,7 @@ import java.util.ArrayList;
 
         @RequestMapping(value = "users/logout", method= RequestMethod.POST)
         public String logout(Model model) {
-            ArrayList<Post> posts = postService.getAllPosts();
+            List<Post> posts = postService.getAllPosts();
             model.addAttribute("posts", posts);
             return "index";
         }
