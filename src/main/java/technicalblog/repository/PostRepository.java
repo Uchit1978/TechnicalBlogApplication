@@ -2,6 +2,7 @@ package technicalblog.repository;
 
 import org.springframework.stereotype.Repository;
 import technicalblog.model.Post;
+import technicalblog.model.User;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -76,4 +77,6 @@ public class PostRepository {
             transaction.rollback();
         }
     }
+
+
 }
